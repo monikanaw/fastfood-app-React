@@ -22,12 +22,15 @@ const cookies = [
   {label: 'Muffin'},
 ]
 
-const builders = () => (
+
+const builders = (props) => (
   <div>
+   <p> pizza </p>
     {pizzas.map(pizza => (
-      <Builder key={pizza.label} label={pizza.label}/>
+      <Builder key={pizza.label} label={pizza.label} ingredients={pizza.ingredients}/>
     ))}
   </div>
 );
+
 
 export default builders;
