@@ -1,7 +1,13 @@
 import React from 'react';
+import Builders from '../builders/Builders.js';
+import Aux from '../../hoc/Aux';
 
-const build = () => {
-  <Aux>
+const builder = (props) => (
+  <div>
+    <div> {props.label} </div>
+    <button> + </button>
+    <button> - </button>
+  </div>
+);
 
-  </Aux>
-}
+export default builder;
