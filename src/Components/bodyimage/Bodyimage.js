@@ -37,13 +37,13 @@ changeBlogPicBackwards() {
    let i = this.state.index;
 
    if( i === 0) {
-     blogCurrentTitle = "Pizza and more"
+     blogCurrentTitle = "Italian pizza"
    }else if( i === 1){
      blogCurrentTitle = "Delicious burger"
    } else if (i === 2){
       blogCurrentTitle = "Refresh drink"
    }else {
-    blogCurrentTitle = "Chocolaty cookies"
+    blogCurrentTitle = "Handmade cookies"
    }
 
     return(

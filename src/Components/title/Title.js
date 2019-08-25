@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const title = () => (
-  <p> Hello </p>
+  <p> </p>
 );
 
 export default title;
