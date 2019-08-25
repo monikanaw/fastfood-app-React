@@ -1,5 +1,21 @@
-.bodyimage {
-  background-image: url('../images/pizza.jpg');
+.image-holder {
+  background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
+}
+
+.pizzabackground {
+  background-image: url('../images/pizza.jpg');
+}
+
+.burgerbackground {
+  background-image: url('../images/burger.jpg');
+}
+
+.drinksbackground {
+  background-image: url('../images/drinks.jpg');
+}
+
+.cookiesbackground {
+  background-image: url('../images/cookies.jpg');
 }
