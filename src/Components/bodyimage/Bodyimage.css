@@ -2,6 +2,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  position: relative;
+  background-position: bottom center;
 }
 
 .pizzabackground {
@@ -18,4 +20,35 @@
 
 .cookiesbackground {
   background-image: url('../images/cookies.jpg');
+}
+
+.arrow-icons {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-arrow-action {
+  left: 50px;
+}
+
+.right-arrow-action {
+  right: 50px;
+}
+
+.fa {
+  color: white;
+}
+
+.title-background {
+  font-size: 4em;
+  color: white;
+  position: absolute;
+  bottom: 0em;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid white;
+  background-color: rgba(71, 70, 70, 0.7);
+  padding: 0.5em;
 }
