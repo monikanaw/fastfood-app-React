@@ -5,7 +5,8 @@ import Aux from '../../../hoc/Aux';
 const builder = (props) => (
   <div>
     <div> {props.label} </div>
-    <div> {props.ingredients} </div>
+    {props.ingredients && <div>Addition: { props.ingredients }</div>}
+    <div> Price: {props.price} </div>
     <button> + </button>
     <button> - </button>
   </div>

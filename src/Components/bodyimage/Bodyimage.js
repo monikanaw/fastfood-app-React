@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Bodyimage.css';
 import Aux from '../../hoc/Aux'
 import '../../fonts/css/all.css';
-import Dots from './Dots.js'
 
 class Bodyimage extends Component {
 
