@@ -27,6 +27,7 @@
   z-index: 3;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .left-arrow-action {
@@ -56,9 +57,15 @@
 .dots {
   position: absolute;
   color: white;
-  bottom: 1em;
+  bottom: 0em;
   left: 50%;
   transform: translateX(-50%);
+  display: inline;
+}
+
+.dots li{
+  display:inline-block;
+  cursor: pointer;
 }
 
 .fa-circle {

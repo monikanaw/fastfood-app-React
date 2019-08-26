@@ -30,45 +30,46 @@ changeBlogPicBackwards() {
   this.setState({index: i});
 }
 
+onDotFirst() {
+  this.setState({index: 0});
+}
+
+onDotSecond() {
+  this.setState({index: 1});
+}
+
+onDotThird() {
+  this.setState({index: 2});
+}
+
+onDotFourth() {
+  this.setState({index: 3});
+}
+
   render() {
    let blogCurrentPic = this.state.class[this.state.index];
 
    let blogCurrentTitle = null;
-   let dots = null;
    let i = this.state.index;
+   let dot1 = <i className="far fa-circle"></i>
+   let dot2 = <i className="far fa-circle"></i>
+   let dot3 = <i className="far fa-circle"></i>
+   let dot4 = <i className="far fa-circle"></i>
+
 
    if( i === 0) {
      blogCurrentTitle = "Italian pizza"
-     dots = <div>
-               <i className="fas fa-circle"></i>
-               <i className="far fa-circle"></i>
-               <i className="far fa-circle"></i>
-               <i className="far fa-circle"></i>
-           </div>
+     dot1 = <i className="fas fa-circle"></i>
    }else if( i === 1){
      blogCurrentTitle = "Delicious burger"
-     dots = <div>
-               <i className="far fa-circle"></i>
-               <i className="fas fa-circle"></i>
-               <i className="far fa-circle"></i>
-               <i className="far fa-circle"></i>
-           </div>
+     dot2 = <i className="fas fa-circle"></i>
    } else if (i === 2){
       blogCurrentTitle = "Refresh drink"
-      dots = <div>
-                <i className="far fa-circle"></i>
-                <i className="far fa-circle"></i>
-                <i className="fas fa-circle"></i>
-                <i className="far fa-circle"></i>
-            </div>
+      dot3 = <i className="fas fa-circle"></i>
    }else {
     blogCurrentTitle = "Handmade cookies"
-    dots = <div>
-              <i className="far fa-circle"></i>
-              <i className="far fa-circle"></i>
-              <i className="far fa-circle"></i>
-              <i className="fas fa-circle"></i>
-          </div>
+    dot4 =
+    <i className="fas fa-circle"></i>
    }
 
     return(
@@ -85,9 +86,12 @@ changeBlogPicBackwards() {
                   <i onClick={(e) => this.changeBlogPicForwards(e)} className="fa fas fa-angle-right fa-4x" aria-hidden="false"></i>
               </div>
             </div>
-            <div className="dots">
-              {dots}
-            </div>
+            <ul className="dots">
+              <li onClick={(e) => this.onDotFirst(e)}> {dot1}</li>
+              <li onClick={(e) => this.onDotSecond(e)}> {dot2}</li>
+              <li onClick={(e) => this.onDotThird(e)}> {dot3}</li>
+              <li onClick={(e) => this.onDotFourth(e)}> {dot4}</li>
+            </ul>
         </div>
      </Aux>
     );
