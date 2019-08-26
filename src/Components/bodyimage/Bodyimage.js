@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Bodyimage.css';
 import Aux from '../../hoc/Aux'
 import '../../fonts/css/all.css';
+import Dots from './Dots.js'
 
 class Bodyimage extends Component {
 
@@ -34,16 +35,41 @@ changeBlogPicBackwards() {
    let blogCurrentPic = this.state.class[this.state.index];
 
    let blogCurrentTitle = null;
+   let dots = null;
    let i = this.state.index;
 
    if( i === 0) {
      blogCurrentTitle = "Italian pizza"
+     dots = <div>
+               <i className="fas fa-circle"></i>
+               <i className="far fa-circle"></i>
+               <i className="far fa-circle"></i>
+               <i className="far fa-circle"></i>
+           </div>
    }else if( i === 1){
      blogCurrentTitle = "Delicious burger"
+     dots = <div>
+               <i className="far fa-circle"></i>
+               <i className="fas fa-circle"></i>
+               <i className="far fa-circle"></i>
+               <i className="far fa-circle"></i>
+           </div>
    } else if (i === 2){
       blogCurrentTitle = "Refresh drink"
+      dots = <div>
+                <i className="far fa-circle"></i>
+                <i className="far fa-circle"></i>
+                <i className="fas fa-circle"></i>
+                <i className="far fa-circle"></i>
+            </div>
    }else {
     blogCurrentTitle = "Handmade cookies"
+    dots = <div>
+              <i className="far fa-circle"></i>
+              <i className="far fa-circle"></i>
+              <i className="far fa-circle"></i>
+              <i className="fas fa-circle"></i>
+          </div>
    }
 
     return(
@@ -59,6 +85,9 @@ changeBlogPicBackwards() {
               <div className="right-arrow-action arrow-icons">
                   <i onClick={(e) => this.changeBlogPicForwards(e)} className="fa fas fa-angle-right fa-4x" aria-hidden="false"></i>
               </div>
+            </div>
+            <div className="dots">
+              {dots}
             </div>
         </div>
      </Aux>
