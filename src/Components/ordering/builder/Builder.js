@@ -8,7 +8,7 @@ const builder = (props) => (
     {props.ingredients && <div>Addition: { props.ingredients }</div>}
     <div> Price: {props.price} </div>
     <button> + </button>
-    <button> - </button>
+    <button onClick={props.added}> - </button>
   </div>
 );
 

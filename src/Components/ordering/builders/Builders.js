@@ -23,14 +23,13 @@ const cookies = [
   {label: 'Muffin', price: '8,99'},
 ]
 
-
-
-const builders = () => (
+const builders = (props) => (
   <Aux>
     <div>
      <p> Pizza </p>
       {pizzas.map(pizza => (
-        <Builder key={pizza.label} label={pizza.label} ingredients={pizza.ingredients} price={pizza.price}/>
+        <Builder key={pizza.label} label={pizza.label} ingredients={pizza.ingredients} price={pizza.price}
+        added = {() => props.productAdded(pizza.label)}/>
       ))}
     </div>
     <div>
@@ -47,6 +46,5 @@ const builders = () => (
     </div>
   </Aux>
 );
-
 
 export default builders;
