@@ -4,7 +4,7 @@ import Aux from '../../../hoc/Aux';
 
 const pizzas = [
   {label: 'Festival', ingredients: 'tomato sauce, cheese, tomato, bazil', price: '17,99'},
-  {label: 'America', ingredients: 'tomato sauce, cheese, pastrami, bacon', price: '16,99'},
+  {label: 'Americana', ingredients: 'tomato sauce, cheese, pastrami, bacon', price: '16,99'},
   {label: 'Italiana', ingredients: 'tomato sauce, cheese, fior di latte, bazil, garlic', price: '17,99'},
   {label: 'Oriental', ingredients: 'tomato sauce, cheese, chorizo, parsley, onion', price: '16,99'},
 ]
@@ -29,7 +29,8 @@ const builders = (props) => (
      <p> Pizza </p>
       {pizzas.map(pizza => (
         <Builder key={pizza.label} label={pizza.label} ingredients={pizza.ingredients} price={pizza.price}
-        added = {() => props.productAdded(pizza.label)}/>
+        added = {() => props.productAdded(pizza.label)}
+        removed = {() => props.productRemoved(pizza.label)}/>
       ))}
     </div>
     <div>
@@ -46,5 +47,6 @@ const builders = (props) => (
     </div>
   </Aux>
 );
+
 
 export default builders;

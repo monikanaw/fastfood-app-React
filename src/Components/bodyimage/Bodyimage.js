@@ -68,8 +68,7 @@ onDotFourth() {
       dot3 = <i className="fas fa-circle"></i>
    }else {
     blogCurrentTitle = "Handmade cookies"
-    dot4 =
-    <i className="fas fa-circle"></i>
+    dot4 = <i className="fas fa-circle"></i>
    }
 
     return(
