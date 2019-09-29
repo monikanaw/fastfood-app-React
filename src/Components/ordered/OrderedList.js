@@ -1,20 +1,20 @@
 import React from 'react';
 
   const OrderedList = (props) => {
-      const pizzalist = [];
+      const productslist = [];
 
-      for( let pizzaName in props.list ) {
-        pizzalist.push(
+      for( let productName in props.list ) {
+        productslist.push(
           {
-            name: pizzaName,
-            amount: props.list[pizzaName]
+            name: productName,
+            amount: props.list[productName]
           }
         );
       }
 
-     var pizzaFilter = pizzalist.filter(e => e.amount )
+     var productsFilter = productslist.filter(e => e.amount )
 
-     const totalOrder = pizzaFilter.
+     const totalOrder = productsFilter.
      map(item =>
        {return <span
            key={item.name }> {item.name} ({item.amount}) </span>})

@@ -20,7 +20,7 @@ const price= {
 
 class Orderlist extends Component {
 state = {
-  pizzas: {
+  products: {
     Festival: 0,
     Americana: 0,
     Italiana: 0,
@@ -39,34 +39,33 @@ state = {
 }
 
 addProduct = (label) => {
-  const oldCount = this.state.pizzas[label];
+  const oldCount = this.state.products[label];
   const updatedCount = oldCount + 1;
   const updatedProduct = {
-    ...this.state.pizzas
+    ...this.state.products
   };
   updatedProduct[label] = updatedCount;
   const priceOrder = price[label];
   const oldPrice = this.state.totalPrice;
   const newPrice = oldPrice + priceOrder;
-  this.setState({pizzas: updatedProduct, totalPrice: newPrice});
+  this.setState({products: updatedProduct, totalPrice: newPrice});
 }
 
 removeProduct = (label) => {
-  const oldCount = this.state.pizzas[label];
+  const oldCount = this.state.products[label];
   if (oldCount <= 0){
     return;
   }
   const updatedCount = oldCount -1;
   const updatedProduct = {
-    ...this.state.pizzas
+    ...this.state.products
   }
   updatedProduct[label] = updatedCount;
   const priceOrder = price[label];
   const oldPrice = this.state.totalPrice;
   const newPrice= oldPrice - priceOrder;
 
-   this.setState({ totalPrice: newPrice, pizzas: updatedProduct });
-   console.log(this.state)
+   this.setState({ totalPrice: newPrice, products: updatedProduct });
 }
 
  render(){
@@ -78,7 +77,7 @@ removeProduct = (label) => {
         productRemoved ={this.removeProduct}
       />
       <OrderedList
-        list= {this.state.pizzas}
+        list= {this.state.products}
         price ={this.state.totalPrice}
        />
     </Aux>
