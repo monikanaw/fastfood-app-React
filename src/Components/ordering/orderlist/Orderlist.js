@@ -32,7 +32,6 @@ addProduct = (label) => {
   const oldPrice = this.state.totalPrice;
   const newPrice = oldPrice + priceOrder;
   this.setState({pizzas: updatedProduct, totalPrice: newPrice});
-     console.log(this.state)
 }
 
 removeProduct = (label) => {
@@ -40,7 +39,6 @@ removeProduct = (label) => {
   if (oldCount <= 0){
     return;
   }
-
   const updatedCount = oldCount -1;
   const updatedProduct = {
     ...this.state.pizzas
@@ -54,7 +52,7 @@ removeProduct = (label) => {
    console.log(this.state)
 }
 
-  render(){
+ render(){
   return (
     <Aux>
       <p> Select your meal </p>
