@@ -7,7 +7,15 @@ const price= {
   Festival: 17.99,
   Americana: 16.99,
   Italiana: 17.99,
-  Oriental: 16.99
+  Oriental: 16.99,
+  Standard: 19.99,
+  America: 22.99,
+  New: 21.99,
+  Orginal: 20.99,
+  Chocolate: 7.99,
+  Cookies: 7.99,
+  Brownie: 10.99,
+  Muffin: 8.99
 };
 
 class Orderlist extends Component {
@@ -16,7 +24,16 @@ state = {
     Festival: 0,
     Americana: 0,
     Italiana: 0,
-    Oriental: 0
+    Oriental: 0,
+    Standard: 0,
+    America: 0,
+    New: 0,
+    Orginal: 0,
+    Chocolate: 0,
+    Cookies: 0,
+    Brownie: 0,
+    Muffin: 0
+
   },
   totalPrice: 0
 }

@@ -12,16 +12,17 @@ import React from 'react';
         );
       }
 
-      const m = pizzalist.
-      map(ig =>
-        {return <span
-            key={ig.name }> {ig.name} ({ig.amount}) </span>})
+     var pizzaFilter = pizzalist.filter(e => e.amount )
 
+     const totalOrder = pizzaFilter.
+     map(item =>
+       {return <span
+           key={item.name }> {item.name} ({item.amount}) </span>})
 
     return (
       <div>
          <p> Your order: </p>
-         <p> {m} </p>
+         <p> {totalOrder} </p>
          <p> Total price: {props.price.toFixed(2)}zl</p>
       </div>
     )

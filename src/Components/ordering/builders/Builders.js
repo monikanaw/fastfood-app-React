@@ -11,14 +11,14 @@ const pizzas = [
 
 const burgers = [
   {label: 'Standard', ingredients: 'beef chop, cheese, tomato, cucumber, onion, bbqsauce', price: '19,99'},
-  {label: 'Americna', ingredients: 'beef chop, cheese, lettuce, bacon, bbq sauce, garlic sauce', price: '22,99'},
+  {label: 'America', ingredients: 'beef chop, cheese, lettuce, bacon, bbq sauce, garlic sauce', price: '22,99'},
   {label: 'New', ingredients: 'cheese, fior di latte, tomato, lettuce, chicken chop,garlic sauce, mayonnaise', price: '21,99'},
   {label: 'Orginal', ingredients: 'beef chop, cheese, chorizo, onion, mustard, tomato, garlic', price: '20,99'},
 ]
 
 const cookies = [
   {label: 'Chocolate', price: '7,99'},
-  {label: 'Standard', price: '7,99'},
+  {label: 'Cookies', price: '7,99'},
   {label: 'Brownie', price: '10,99'},
   {label: 'Muffin', price: '8,99'},
 ]
@@ -36,13 +36,17 @@ const builders = (props) => (
     <div>
      <p> Burger </p>
       {burgers.map(burger => (
-        <Builder key={burger.label} label={burger.label} ingredients={burger.ingredients} price={burger.price}/>
+        <Builder key={burger.label} label={burger.label} ingredients={burger.ingredients} price={burger.price}
+        added = {() => props.productAdded(burger.label)}
+        removed = {() => props.productRemoved(burger.label)}/>
       ))}
     </div>
     <div>
      <p> Cookies </p>
       {cookies.map(cookies => (
-        <Builder key={cookies.label} label={cookies.label} price={cookies.price}/>
+        <Builder key={cookies.label} label={cookies.label} price={cookies.price}
+        added = {() => props.productAdded(cookies.label)}
+        removed = {() => props.productRemoved(cookies.label)}/>
       ))}
     </div>
   </Aux>
