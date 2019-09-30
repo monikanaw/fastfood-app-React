@@ -6,11 +6,11 @@ const builder = (props) => {
 
   let label = null;
 
-  if(props.type === 'pizza'){
+  if(props.type === 'pizza' && props.number === 'first'){
      label = 'Pizza'
-  }else if (props.type === 'burger'){
+  }else if (props.type === 'burger' && props.number === 'first'){
     label = 'Burger'
-  }else{
+  }else if (props.type === 'cookie' && props.number === 'first'){
     label = 'Cookies'
   }
 
