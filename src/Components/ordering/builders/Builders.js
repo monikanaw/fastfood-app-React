@@ -31,5 +31,4 @@ import Aux from '../../../hoc/Aux';
     </Aux>
   );
 
-
 export default builders;
