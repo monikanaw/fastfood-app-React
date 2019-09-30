@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Builders from '../builders/Builders.js';
 import OrderedList from '../../ordered/OrderedList.js';
 import Aux from '../../../hoc/Aux';
+import './Orderlist.css';
 
 const price= {
   Festival: 17.99,
@@ -13,7 +14,7 @@ const price= {
   New: 21.99,
   Orginal: 20.99,
   Chocolate: 7.99,
-  Cookies: 7.99,
+  Cookie: 7.99,
   Brownie: 10.99,
   Muffin: 8.99
 };
@@ -30,10 +31,9 @@ state = {
     New: 0,
     Orginal: 0,
     Chocolate: 0,
-    Cookies: 0,
+    Cookie: 0,
     Brownie: 0,
     Muffin: 0
-
   },
   totalPrice: 0
 }
@@ -64,22 +64,32 @@ removeProduct = (label) => {
   const priceOrder = price[label];
   const oldPrice = this.state.totalPrice;
   const newPrice= oldPrice - priceOrder;
-
-   this.setState({ totalPrice: newPrice, products: updatedProduct });
+  this.setState({ totalPrice: newPrice, products: updatedProduct });
 }
 
  render(){
+     const toDisabled = {
+       ...this.state.products
+     };
+
+     for (let name in toDisabled){
+       toDisabled[name] = toDisabled[name] <= 0
+     }
+
   return (
     <Aux>
-      <p> Select your meal </p>
-      <Builders
-        productAdded ={this.addProduct}
-        productRemoved ={this.removeProduct}
-      />
-      <OrderedList
-        list= {this.state.products}
-        price ={this.state.totalPrice}
-       />
+      <p className="select"> Select your meal </p>
+       <div className="listofproducts">
+        <Builders
+          productAdded ={this.addProduct}
+          productRemoved ={this.removeProduct}
+          disable={toDisabled}
+        />
+       </div>
+        <OrderedList
+          list= {this.state.products}
+          price ={this.state.totalPrice}
+         />
     </Aux>
   );
  }

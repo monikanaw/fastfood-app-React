@@ -1,0 +1,6 @@
+.orderedtable{
+  border: 2px solid black;
+  margin: 3em auto;
+  max-width: 250px;
+  padding: 1em;
+}

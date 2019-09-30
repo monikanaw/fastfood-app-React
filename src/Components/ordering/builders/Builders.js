@@ -13,7 +13,7 @@ import Aux from '../../../hoc/Aux';
     {type:'burger', label: 'New', ingredients: 'cheese, fior di latte, tomato, lettuce, chicken chop,garlic sauce, mayonnaise', price: '21,99'},
     {type:'burger', label: 'Orginal', ingredients: 'beef chop, cheese, chorizo, onion, mustard, tomato, garlic', price: '20,99'},
     {number:'first', type:'cookie', label: 'Chocolate', price: '7,99'},
-    {type:'cookie', label: 'Cookies', price: '7,99'},
+    {type:'cookie', label: 'Cookie', price: '7,99'},
     {type:'cookie', label: 'Brownie', price: '10,99'},
     {type:'cookie', label: 'Muffin', price: '8,99'},
   ]
@@ -24,7 +24,8 @@ import Aux from '../../../hoc/Aux';
         {items.map(item => (
           <Builder key={item.label} number={item.number} type={item.type} label={item.label} ingredients={item.ingredients} price={item.price}
           added = {() => props.productAdded(item.label)}
-          removed = {() => props.productRemoved(item.label)}/>
+          removed = {() => props.productRemoved(item.label)}
+          disable={props.disable[item.label]}/>
         ))}
       </div>
     </Aux>

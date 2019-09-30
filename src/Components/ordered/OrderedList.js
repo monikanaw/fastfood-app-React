@@ -1,4 +1,5 @@
 import React from 'react';
+import './OrderedList.css';
 
   const OrderedList = (props) => {
       const productslist = [];
@@ -20,7 +21,7 @@ import React from 'react';
            key={item.name }> {item.name} ({item.amount}) </span>})
 
     return (
-      <div>
+      <div className='orderedtable'>
          <p> Your order: </p>
          <p> {totalOrder} </p>
          <p> Total price: {props.price.toFixed(2)}zl</p>
