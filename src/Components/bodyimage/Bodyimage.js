@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Bodyimage.css';
 import Aux from '../../hoc/Aux'
 import '../../fonts/css/all.css';
+import Description from '../description/Description.js';
 
 class Bodyimage extends Component {
 
@@ -91,6 +92,7 @@ onDotFourth() {
               <li onClick={(e) => this.onDotThird(e)}> {dot3}</li>
               <li onClick={(e) => this.onDotFourth(e)}> {dot4}</li>
             </ul>
+            <Description />
         </div>
      </Aux>
     );
