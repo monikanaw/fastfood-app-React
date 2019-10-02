@@ -1,3 +1,11 @@
 li {
   list-style-type: none;
+  display: inline-block;
+  margin: 0.7em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navigation-menu:last-child {
+  margin-right: 2em;
 }

@@ -4,3 +4,8 @@ a {
   display: inline-block;
   font-weight: bold;
 }
+
+
+.navigation-link{
+  display: inline-block;
+}
