@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom'
 import './Header.css';
 import Logo from '../logo/Logo.js';
 import Orderlist from '../ordering/orderlist/Orderlist.js';
@@ -13,8 +13,10 @@ const header = () => (
       <Logo />
       <Navigationmenu />
     </header>
-    <Route path="/" exact component={Bodyimage}/>
-    <Route path="/ordering" exact component={Orderlist}/>
+    <Switch>
+      <Route path="/" exact component={Bodyimage}/>
+      <Route path="/ordering" exact component={Orderlist}/>
+    </Switch>
    </div>
 );
 
