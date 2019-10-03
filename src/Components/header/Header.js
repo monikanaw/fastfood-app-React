@@ -4,6 +4,7 @@ import './Header.css';
 import Logo from '../logo/Logo.js';
 import Orderlist from '../ordering/orderlist/Orderlist.js';
 import Bodyimage from '../bodyimage/Bodyimage.js';
+import Booking from '../Booking/Booking.js';
 import Navigationmenu from '../navigationmenu/Navigationmenu.js'
 
 
@@ -16,6 +17,7 @@ const header = () => (
     <Switch>
       <Route path="/" exact component={Bodyimage}/>
       <Route path="/ordering" exact component={Orderlist}/>
+      <Route path="/booking" exact component={Booking}/>
     </Switch>
    </div>
 );
