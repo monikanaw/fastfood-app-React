@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Booking.css';
 import Calendardata from './Calendardata.js';
+import Hour from './Hour.js';
+import Table from './Table.js';
 
 
 class Booking extends Component {
@@ -30,10 +32,16 @@ class Booking extends Component {
 
   render() {
     return(
-      <Calendardata
-        onDay={this.onDay}
-        day={this.state.day}
-      />
+      <div>
+        <Calendardata
+          onDay={this.onDay}
+          day={this.state.day}
+        />
+        <Table
+          day={this.state.day}
+        />
+        <Hour />
+      </div>
     )
   }
 }
