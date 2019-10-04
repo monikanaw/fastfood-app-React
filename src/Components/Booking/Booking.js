@@ -10,16 +10,31 @@ class Booking extends Component {
  }
 
   onDay = (value) => {
-    let day2 = value.toDateString()
+    const monthNames = [
+      "January", "February", "March",
+      "April", "May", "June", "July",
+      "August", "September", "October",
+      "November", "December"
+    ];
+
+    let day = value.getDate();
+    let monthIndex = value.getMonth();
+    let year = value.getFullYear();
+
+    let dayselect = day + ' ' + monthNames[monthIndex] + ' ' + year
+
     this.setState({
-      day: day2
+      day: dayselect
     })
   }
 
   render() {
-      return(
-        <Calendardata onDay={this.onDay} day={this.state.day}/>
-     )
+    return(
+      <Calendardata
+        onDay={this.onDay}
+        day={this.state.day}
+      />
+    )
   }
 }
 

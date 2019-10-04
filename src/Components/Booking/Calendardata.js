@@ -2,9 +2,11 @@ import React from 'react';
 import Calendar from 'react-calendar'
 
 const Calendardata = (props) => {
+
   let date = new Date();
   let datestring = date.toDateString();
   let previousdate = new Date(new Date().setDate(new Date().getDate() + 15));
+
 
   return (
     <div className="calendar">
@@ -22,7 +24,5 @@ const Calendardata = (props) => {
   )
 
 }
-
-
 
 export default Calendardata;
