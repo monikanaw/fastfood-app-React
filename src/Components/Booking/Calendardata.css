@@ -1,0 +1,10 @@
+.calendar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2em auto;
+}
+
+.calendar p {
+  margin: 5em auto 2em auto;
+}

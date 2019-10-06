@@ -24,15 +24,23 @@ class Table extends Component {
       this.setState(newState);
     }
 
-
   render(){
+      let disableadd = undefined;
+      let disablesubstract = undefined;
+
+      if( this.state.person == 1){
+        disablesubstract = true
+      }else if (this.state.person == 8){
+        disableadd = true
+      }
+
     return (
-      <div>
-      <p className="table-paragraph"> Pick the number of people for whom you want to reserve a table </p>
-        <div className="table">
-          <button onClick={this.Onsubstract}> - </button>
+      <div className="table">
+        <p className="table-paragraph"> 1. Pick the number of people for whom you want to reserve a table </p>
+        <div className="table-buttons">
+          <button className= "button" onClick={this.Onsubstract} disabled={disablesubstract}> - </button>
            {this.state.person}
-          <button onClick={this.Onadd}> + </button>
+          <button className= "button" onClick={this.Onadd} disabled={disableadd}> + </button>
         </div>
       </div>
     )

@@ -1,7 +1,13 @@
-.calendar {
-  margin: 7em;
+.booking-title {
+  font-size: 3em;
+  margin-top: 3em;
 }
 
-.calendar-title {
-  font-size: 2em;
+.booking-subtitle {
+  font-size: 1.5em;
+  margin-top: -1em;
+}
+
+.booking {
+  text-align: center;
 }

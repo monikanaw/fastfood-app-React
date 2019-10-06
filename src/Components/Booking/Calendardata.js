@@ -1,5 +1,6 @@
 import React from 'react';
 import Calendar from 'react-calendar'
+import './Calendardata.css';
 
 const Calendardata = (props) => {
 
@@ -10,8 +11,7 @@ const Calendardata = (props) => {
 
   return (
     <div className="calendar">
-     <p className="calendar-title"> Choose a day, hour and a table you want to book </p>
-     <p> (Our calendar is activ only for 15 days in advance) </p>
+     <p> 2. Choose date of your visit (please select from available dates) </p>
      <Calendar
        calendarType = "US"
        minDate = {date}
@@ -19,7 +19,6 @@ const Calendardata = (props) => {
        value={date}
        onClickDay={(value) => props.onDay(value)}
      />
-       { props.day && <p>You have chosen: { props.day }</p>}
     </div>
   )
 

@@ -32,17 +32,25 @@ class Booking extends Component {
     )
   }
 
+  OnNumber = () => {
+
+  }
+
   render() {
     return(
-      <div>
+      <div className= "booking">
+        <p className="booking-title"> Choose a day, hour and a table you want to book </p>
+        <p className ="booking-subtitle"> (Our calendar is activ only for 15 days in advance) </p>
+        <Table
+          day={this.state.day}
+        />
         <Calendardata
           onDay={this.onDay}
           day={this.state.day}
         />
-        <Table
-          day={this.state.day}
+        <Hour
+         day={this.state.day}
         />
-        <Hour />
       </div>
     )
   }
