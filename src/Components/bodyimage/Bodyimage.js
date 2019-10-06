@@ -18,7 +18,8 @@ changeBlogPicForwards() {
   } else {
       i = i + 1;
   }
-  this.setState({index: i});
+  const newState = Object.assign({}, this.state, {index: i});
+  this.setState(newState);
 }
 
 changeBlogPicBackwards() {
@@ -28,23 +29,44 @@ changeBlogPicBackwards() {
   } else {
       i = i - 1;
   }
-  this.setState({index: i});
+  const newState = Object.assign({}, this.state, {index: i});
+  this.setState(newState);
 }
 
 onDotFirst() {
-  this.setState({index: 0});
+  const updatedState = {
+    ...this.state,
+    index: 0
+  };
+  this.setState(updatedState);
+  console.log(this.state)
 }
 
 onDotSecond() {
-  this.setState({index: 1});
+  const updatedState = {
+    ...this.state,
+    index: 1
+  };
+  this.setState(updatedState);
+  console.log(this.state)
 }
 
 onDotThird() {
-  this.setState({index: 2});
+  const updatedState = {
+    ...this.state,
+    index: 2
+  };
+  this.setState(updatedState);
+  console.log(this.state)
 }
 
 onDotFourth() {
-  this.setState({index: 3});
+  const updatedState = {
+    ...this.state,
+    index: 3
+  };
+  this.setState(updatedState);
+  console.log(this.state)
 }
 
   render() {
@@ -87,10 +109,10 @@ onDotFourth() {
               </div>
             </div>
             <ul className="dots">
-              <li onClick={(e) => this.onDotFirst(e)}> {dot1}</li>
-              <li onClick={(e) => this.onDotSecond(e)}> {dot2}</li>
-              <li onClick={(e) => this.onDotThird(e)}> {dot3}</li>
-              <li onClick={(e) => this.onDotFourth(e)}> {dot4}</li>
+              <li onClick={(e) => this.onDotFirst(e)}> {dot1} </li>
+              <li onClick={(e) => this.onDotSecond(e)}> {dot2} </li>
+              <li onClick={(e) => this.onDotThird(e)}> {dot3} </li>
+              <li onClick={(e) => this.onDotFourth(e)}> {dot4} </li>
             </ul>
             <Description />
         </div>

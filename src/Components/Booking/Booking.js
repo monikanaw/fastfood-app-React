@@ -25,9 +25,11 @@ class Booking extends Component {
 
     let dayselect = day + ' ' + monthNames[monthIndex] + ' ' + year
 
-    this.setState({
-      day: dayselect
-    })
+    const updatedState = {...this.state, day: dayselect}
+
+    this.setState(
+      updatedState
+    )
   }
 
   render() {

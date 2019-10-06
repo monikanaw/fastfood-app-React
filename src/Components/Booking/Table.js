@@ -1,26 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Table.css';
 
-const Table = (props) => {
+class Table extends Component {
+  state = {
+    person: 1
+  }
 
-  let table1 = undefined
-  let table2 = undefined
-  let table3 = undefined
+    Onadd = ()  => {
+      const newState = Object.assign({}, this.state, {person: 2});
+      this.setState(newState);
+    }
 
-   if(props.day){
-     console.log(props)
-      table1 = <button> for one people </button>
-      table2 = <button> for one people </button>
-      table3 = <button> for family (4- 6 people) </button>
-   }
+    Onsubstract = () => {
+      const newState = Object.assign({}, this.state);
+      newState.person = newState.person - 1;
+      this.setState(newState);
+    }
 
-  return (
-    <div className="table">
-      {table1}
-      {table2}
-      {table3}
-    </div>
-  )
+
+  render(){
+    return (
+      <div className="table">
+        <button onClick={this.Onsubstract}> - </button>
+         {this.state.person}
+        <button onClick={this.Onadd}> + </button>
+      </div>
+    )
+  }
 }
 
 export default Table;
