@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './Booking.css';
-import Calendardata from './Calendardata.js';
-import Hour from './Hour.js';
 import Table from './Table.js';
+import Calendardata from './Calendardata.js';
 
 
 class Booking extends Component {
@@ -32,10 +31,6 @@ class Booking extends Component {
     )
   }
 
-  OnNumber = () => {
-
-  }
-
   render() {
     return(
       <div className= "booking">
@@ -43,13 +38,7 @@ class Booking extends Component {
         <p className ="booking-subtitle"> (Our calendar is activ only for 15 days in advance) </p>
         <Table
           day={this.state.day}
-        />
-        <Calendardata
           onDay={this.onDay}
-          day={this.state.day}
-        />
-        <Hour
-         day={this.state.day}
         />
       </div>
     )

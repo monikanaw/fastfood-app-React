@@ -1,6 +1,7 @@
 import React from 'react';
 import Calendar from 'react-calendar'
 import './Calendardata.css';
+import Hour from './Hour.js';
 
 const Calendardata = (props) => {
 
@@ -18,6 +19,10 @@ const Calendardata = (props) => {
        maxDate = {previousdate}
        value={date}
        onClickDay={(value) => props.onDay(value)}
+     />
+     <Hour
+      day={props.day}
+      table={props.table}
      />
     </div>
   )

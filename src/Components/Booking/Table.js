@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Table.css';
+import Calendardata from './Calendardata.js';
+
 
 class Table extends Component {
   state = {
@@ -42,6 +44,11 @@ class Table extends Component {
            {this.state.person}
           <button className= "button" onClick={this.Onadd} disabled={disableadd}> + </button>
         </div>
+        <Calendardata
+          onDay={this.props.onDay}
+          day={this.props.day}
+          table={this.state.person}
+        />
       </div>
     )
   }
