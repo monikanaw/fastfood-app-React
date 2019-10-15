@@ -17,21 +17,33 @@ class Form extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    this.setState ({
+      firstName: "",
+      lastName: "",
+      number: "",
+      email: ""
+    });
   }
+
+  updateNumber = (e) => {
+    const val = e.target.value;
+    if (e.target.validity.valid) this.setState({number: e.target.value});
+    else if (val === '' || val === '-') this.setState({number: val});
+  }
+
 
   render(){
     return(
       <div className="formm">
         <form>
-          <input
+          <input autoFocus
             name ="firstName" placeholder='First name' value={this.state.firstName} onChange={e => this.change(e)}
           />
           <input
              name ="lastName" placeholder='Last name' value={this.state.lastName} onChange={e => this.change(e)}
           />
           <input
-             name ="number" placeholder='number' value={this.state.number} onChange={e => this.change(e)}
+             name ="tel" pattern="^-?[0-9]\d*\.?\d*$" type="tel" placeholder='phone number' value={this.state.number} onChange={e => this.updateNumber(e)}
           />
           <input
             name ="email" placeholder='email' value={this.state.email} onChange={e => this.change(e)}
