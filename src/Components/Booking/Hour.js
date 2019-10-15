@@ -23,17 +23,17 @@ class Hour extends Component {
     console.log(this.state.hour)
   }
 
+  renderRedirect = () => {
+     if (this.state.click) {
+       return <Redirect to='/form' />
+     }
+  }
+
 
 render() {
-
- let redirect = null;
- if(this.state.click){
-   redirect = <Redirect to="/form" />
- }
-
   return (
    <div className="hour">
-      {redirect}
+      {this.renderRedirect()}
       { this.props.day &&  <div>
         <p> For this date and selected table we have available thise hours. Please select one of them or choose other date. </p>
         <div>
