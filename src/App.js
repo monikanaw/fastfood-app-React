@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 import './App.css';
 import Title from './Components/title/Title.js';
@@ -12,11 +11,9 @@ import Orderlist from './Components/ordering/orderlist/Orderlist.js';
 class App extends Component {
   render(){
   return (
-    <BrowserRouter>
       <div>
        <Header />
       </div>
-    </BrowserRouter>
   );
  }
 }
