@@ -32,6 +32,10 @@ class Form extends Component {
   }
 
 
+
+
+
+
   render(){
     return(
       <div className="formm">
@@ -46,7 +50,7 @@ class Form extends Component {
              name ="tel" pattern="^-?[0-9]\d*\.?\d*$" type="tel" placeholder='phone number' value={this.state.number} onChange={e => this.updateNumber(e)}
           />
           <input
-            name ="email" placeholder='email' value={this.state.email} onChange={e => this.change(e)}
+            name ="email" type="email" placeholder='email' value={this.state.email} onChange={e => this.change(e)}
            />
            <button onClick={(e) => this.onSubmit(e)}> Submit </button>
         </form>
