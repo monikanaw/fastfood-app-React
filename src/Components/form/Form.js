@@ -6,23 +6,28 @@ class Form extends Component {
    firstName: "",
    lastName: "",
    number: "",
-   email: ""
+   email: "",
+   emailIsValid: false
   }
 
  change = e => {
     this.setState ({
       [e.target.name]: e.target.value
     });
+    console.log(this.state.email)
   };
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.setState ({
-      firstName: "",
-      lastName: "",
-      number: "",
-      email: ""
-    });
+    if(this.state.firstName && this.state.lastName && this.state.number && this.state.email){
+      this.setState ({
+        firstName: "",
+        lastName: "",
+        number: "",
+        email: ""
+      });
+    }
+    console.log(this.state)
   }
 
   updateNumber = (e) => {
@@ -31,9 +36,22 @@ class Form extends Component {
     else if (val === '' || val === '-') this.setState({number: val});
   }
 
-
-
-
+  isValidEmailAddress = (address) => {
+      if(address.match(/.+@.+/)){
+        const newState = Object.assign({}, this.state);
+        const k = newState.emailIsValid = true;
+        this.setState({
+          emailIsValid: k
+        })
+      }else {
+        const newState = Object.assign({}, this.state);
+        const k = newState.emailIsValid = false;
+        this.setState({
+          emailIsValid: k
+        })
+      }
+        console.log(this.state.emailIsValid)
+  }
 
 
   render(){
@@ -51,6 +69,7 @@ class Form extends Component {
           />
           <input
             name ="email" type="email" placeholder='email' value={this.state.email} onChange={e => this.change(e)}
+            onBlur={() => this.isValidEmailAddress(this.state.email)}
            />
            <button onClick={(e) => this.onSubmit(e)}> Submit </button>
         </form>
