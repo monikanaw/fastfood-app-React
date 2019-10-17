@@ -2,32 +2,36 @@ import React, { Component } from 'react';
 import './Form.css';
 
 class Form extends Component {
+
   state = {
-   firstName: "",
-   lastName: "",
-   number: "",
-   email: "",
-   emailIsValid: false
-  }
+   inputs: {
+     firtsName: "",
+     lastName: "",
+     number: "",
+     email: ""
+   },
+ };
 
  change = e => {
-    this.setState ({
-      [e.target.name]: e.target.value
-    });
-    console.log(this.state.email)
+   this.setState({
+     inputs: {
+       ...this.state.inputs,
+       [e.target.name]: e.target.value
+     },
+   });
   };
 
-  onSubmit = (e) => {
-    e.preventDefault();
-    if(this.state.firstName && this.state.lastName && this.state.number && this.state.email){
+  OnSubmit = event => {
+   event.preventDefault();
+    if(this.state.inputs){
       this.setState ({
-        firstName: "",
-        lastName: "",
-        number: "",
-        email: ""
-      });
-    }
-    console.log(this.state)
+          firstName: "",
+          lastName: "",
+          number: "",
+          email: ""
+        });
+        alert("your booking was successful" )
+     }
   }
 
   updateNumber = (e) => {
@@ -36,49 +40,29 @@ class Form extends Component {
     else if (val === '' || val === '-') this.setState({number: val});
   }
 
-  isValidEmailAddress = (address) => {
-      if(address.match(/.+@.+/)){
-        const newState = Object.assign({}, this.state);
-        const k = newState.emailIsValid = true;
-        this.setState({
-          emailIsValid: k
-        })
-      }else {
-        const newState = Object.assign({}, this.state);
-        const k = newState.emailIsValid = false;
-        this.setState({
-          emailIsValid: k
-        })
-      }
-        console.log(this.state.emailIsValid)
-  }
-
-
   render(){
     return(
       <div className="formm">
-        <form>
+        <form onSubmit={(e) => this.OnSubmit(e)} >
           <input autoFocus
-            name ="firstName" placeholder='First name' value={this.state.firstName} onChange={e => this.change(e)}
+            name ="firstName" required placeholder='First name' value={this.state.firstName}
+            onChange={e => this.change(e)}
           />
           <input
-             name ="lastName" placeholder='Last name' value={this.state.lastName} onChange={e => this.change(e)}
+             name ="lastName" placeholder='Last name' value={this.state.lastName} onChange={e => this.change(e)} required
           />
           <input
              name ="tel" pattern="^-?[0-9]\d*\.?\d*$" type="tel" placeholder='phone number' value={this.state.number} onChange={e => this.updateNumber(e)}
+             required
           />
           <input
-            name ="email" type="email" placeholder='email' value={this.state.email} onChange={e => this.change(e)}
-            onBlur={() => this.isValidEmailAddress(this.state.email)}
+            name ="email" type="email" placeholder='email' value={this.state.email} onChange={e => this.change(e)} required
            />
-           <button onClick={(e) => this.onSubmit(e)}> Submit </button>
+           <button> Submit </button>
         </form>
       </div>
     )
   }
-
 }
-
-
 
 export default Form;
