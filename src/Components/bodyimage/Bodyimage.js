@@ -90,8 +90,8 @@ onDotFourth() {
       blogCurrentTitle = "Refresh drink"
       dot3 = <i className="fas fa-circle"></i>
    }else {
-    blogCurrentTitle = "Handmade cookies"
-    dot4 = <i className="fas fa-circle"></i>
+      blogCurrentTitle = "Handmade cookies"
+      dot4 = <i className="fas fa-circle"></i>
    }
 
     return(
