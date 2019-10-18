@@ -5,7 +5,7 @@ import Calendardata from './Calendardata.js';
 
 class Table extends Component {
   state = {
-    person: 1
+    person: 1,
   }
 
     Onadd = ()  => {
@@ -29,16 +29,20 @@ class Table extends Component {
   render(){
       let disableadd = undefined;
       let disablesubstract = undefined;
+      let text = undefined;
 
-      if( this.state.person == 1){
+      if( this.state.person === 1){
         disablesubstract = true
-      }else if (this.state.person == 8){
-        disableadd = true
+      }else if (this.state.person === 8){
+        disableadd = true;
+        text = "We have tables for max 8 people"
       }
 
     return (
       <div className="table">
-        <p className="table-paragraph"> 1. Pick the number of people for whom you want to reserve a table </p>
+        <div className="table-paragraph"> 1. Pick the number of people for whom you want to reserve a table
+        <p className="max-table"> {text} </p>
+        </div>
         <div className="table-buttons">
           <button className= "button" onClick={this.Onsubstract} disabled={disablesubstract}> - </button>
            {this.state.person}

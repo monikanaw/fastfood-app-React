@@ -12,6 +12,10 @@ class Form extends Component {
    },
  };
 
+ componentDidMount(){
+   console.log(this.props)
+ }
+
  change = e => {
    this.setState({
      inputs: {
@@ -43,6 +47,7 @@ class Form extends Component {
   render(){
     return(
       <div className="formm">
+        <p> You are booking for {this.props.location.state.table} people, on {this.props.location.state.date} at {this.props.location.state.hour}</p>
         <form onSubmit={(e) => this.OnSubmit(e)} >
           <input autoFocus
             name ="firstName" required placeholder='First name' value={this.state.firstName}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Hour.css';
-import { Redirect } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import Form from '../form/Form.js';
 
 class Hour extends Component {
@@ -25,7 +25,16 @@ class Hour extends Component {
 
   renderRedirect = () => {
      if (this.state.click) {
-       return <Redirect to='/form' />
+       return <Redirect
+        to={{
+           pathname: "/form",
+           state: {
+             date: this.props.day,
+             table: this.props.table,
+             hour: this.state.hour
+           }
+        }}
+      />
      }
   }
 
