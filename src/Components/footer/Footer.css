@@ -2,4 +2,18 @@
   background-color: black;
   color: white;
   display: flex;
+  padding: 2em;
+}
+
+.name {
+ flex: 0 0 50%;
+}
+
+.contact {
+  flex: 0 0 auto;
+}
+
+.contact img {
+  max-width: 1.5em;
+  max-height: 1.5em;
 }
