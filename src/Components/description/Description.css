@@ -1,6 +1,16 @@
 .description {
-  margin: 3em 1em;
+  margin: 6em auto;
 }
+
+.description-paragraph {
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  margin: 7em auto 4em auto;
+  line-height: 25px;
+}
+
 
 .btn-ord-book {
   display: flex;
