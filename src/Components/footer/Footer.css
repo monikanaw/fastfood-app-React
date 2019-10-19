@@ -1,19 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao');
+
 .footer {
+  height: 24vh;
   background-color: black;
   color: white;
   display: flex;
-  padding: 2em;
+  align-items: center;
+  font-family: 'Josefin Sans';
+  text-align: center;
+}
+
+.address {
+ flex: 1 0 auto;
 }
 
 .name {
- flex: 0 0 50%;
+  font-family: 'Liu Jian Mao Cao';
+  flex: 1 0 30%;
+  font-size: 2em;
+  max-height: 80%;
 }
 
 .contact {
-  flex: 0 0 auto;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.name img {
+  max-width: 2em;
+  max-height: 2em;
+}
+
+.name p {
+ margin-top: -.3em;
+}
+
+.contact div p {
+ display: inline-block;
 }
 
 .contact img {
   max-width: 1.5em;
   max-height: 1.5em;
+  display: inline-block;
+  margin: -0.4em 1em;
 }
