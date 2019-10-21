@@ -1,3 +1,7 @@
 .hour {
-  padding: 2em auto 4em auto;
+  padding: 1em auto 3em auto;
+}
+
+.hour p {
+  font-weight: bold;
 }

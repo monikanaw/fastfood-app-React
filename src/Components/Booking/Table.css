@@ -21,7 +21,8 @@
 }
 
 .table-paragraph {
-  margin-bottom: 3em;
+  font-weight: bold;
+  margin-bottom: 2em;
 }
 
 .table-next {
@@ -30,7 +31,7 @@
 }
 
 .table {
-  margin-top: 5em;
+  margin-top: 3em;
 }
 
 .max-table {
