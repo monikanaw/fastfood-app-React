@@ -7,7 +7,7 @@
 
 .button {
   color: #4e4c4c;
-  background-color: #e5e5e5;
+  background-color: #f7f7f7;
   border: 1px solid #c7c3c3;
   border-radius: 15px;
   width: 4em;
@@ -16,8 +16,8 @@
 }
 
 .button:disabled {
-  background-color: #f3f2f2;
-  border: 1px solid #f3f2f2;
+  background-color: #e1e1e1;
+  border: 1px solid #d5d5d5;
 }
 
 .table-paragraph {

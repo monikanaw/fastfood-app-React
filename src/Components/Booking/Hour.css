@@ -5,3 +5,16 @@
 .hour p {
   font-weight: bold;
 }
+
+.hour-button button {
+  height: 2.8em;
+  width: 4em;
+  margin: 0.5em;
+  background-color: #f7f7f7;
+  border: 1px solid #c7c3c3;
+  border-radius: 18px;
+}
+
+.continue-button {
+  height: 2.8em;
+}

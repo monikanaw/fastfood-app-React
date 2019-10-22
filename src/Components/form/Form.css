@@ -1,7 +1,13 @@
 .formm {
-  height: 300px;
-  margin: 150px auto;
+  background-color: #c8c8c8;
+  background-size: cover;
   text-align: center;
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+.formm p {
+
 }
 
 .formm input{
