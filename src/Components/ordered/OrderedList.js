@@ -18,7 +18,7 @@ import './OrderedList.css';
      const totalOrder = productsFilter.
      map(item =>
        {return <span
-           key={item.name }> {item.name} ({item.amount}) </span>})
+           key={item.name }> {item.name} - {item.amount}, </span>})
 
     return (
       <div className='orderedtable'>

@@ -16,9 +16,10 @@ const builder = (props) => {
   }
 
   return (
-    <div>
+    <div className="builder">
       {props.number && <p className='label'> {label} </p>}
       <div> {props.label} </div>
+      {props.image}
       {props.ingredients && <div> Addition: { props.ingredients }</div>}
       <div> Price: {props.price} </div>
       <button onClick={props.added}> + </button>

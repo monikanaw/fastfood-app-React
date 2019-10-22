@@ -4,3 +4,8 @@
   color: #921e05;
   margin-top: 3em;
 }
+
+.builder img {
+  max-width: 120px;
+  max-height: 120px;
+}
