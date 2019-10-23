@@ -17,13 +17,15 @@ const builder = (props) => {
 
   return (
     <div className="builder">
-      {props.number && <p className='label'> {label} </p>}
-      <div> {props.label} </div>
-      {props.image}
-      {props.ingredients && <div> Addition: { props.ingredients }</div>}
-      <div> Price: {props.price} </div>
-      <button onClick={props.added}> + </button>
-      <button onClick={props.removed} disabled={props.disable}> - </button>
+      {props.number && <p className='main-label'> {label} </p>}
+      <div className='label'> {props.label} </div>
+       <div className='menu-block'>
+        {props.image}
+        {props.ingredients && <div className='ingredients'> Addition: { props.ingredients }</div>}
+        <div className='price'> {props.price}zl </div>
+        <button onClick={props.added}> + </button>
+        <button onClick={props.removed} disabled={props.disable}> - </button>
+       </div>
     </div>
   )
   console.log(label)

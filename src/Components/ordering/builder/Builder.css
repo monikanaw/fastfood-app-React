@@ -1,11 +1,41 @@
-.label {
+.main-label {
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 2.1em;
   color: #921e05;
-  margin-top: 3em;
+  margin-top: 2em;
+}
+
+.builder {
+  margin-left: 5em;
 }
 
 .builder img {
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.label {
+  font-size: 1.5em;
+}
+
+.menu-block {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.ingredients {
+  font-size: 1.3em;
+  margin: 0.5em 1em auto 1em;
+  max-width: 15vw;
+}
+
+.price {
+  font-size: 1.3em;
+  margin: auto 1.5em;
+}
+
+.builder button {
+  height: 2.5em;
+  width: 4em;
+  margin: auto 0.5em;
 }
