@@ -77,20 +77,22 @@ removeProduct = (label) => {
      }
 
   return (
-    <Aux>
+    <div>
       <p className="select"> Select your meal </p>
-       <div className="listofproducts">
-        <Builders
-          productAdded ={this.addProduct}
-          productRemoved ={this.removeProduct}
-          disable={toDisabled}
-        />
-       </div>
-        <OrderedList
-          list= {this.state.products}
-          price ={this.state.totalPrice}
-         />
-    </Aux>
+        <div className='menu-ordered'>
+           <div className="listofproducts">
+            <Builders
+              productAdded ={this.addProduct}
+              productRemoved ={this.removeProduct}
+              disable={toDisabled}
+            />
+           </div>
+            <OrderedList
+              list= {this.state.products}
+              price ={this.state.totalPrice}
+             />
+         </div>
+    </div>
   );
  }
 }

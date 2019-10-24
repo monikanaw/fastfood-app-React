@@ -3,9 +3,13 @@
   font-weight: 600;
   margin-left: 2em;
   margin-top: 3.5em;
-  text-align:center;
+  text-align: center;
 }
 
 .listofproducts {
-  margin: 1.5em 3em;
+  margin: 1.5em 3em 7em 3em;
+}
+
+.menu-ordered {
+  display: flex;
 }

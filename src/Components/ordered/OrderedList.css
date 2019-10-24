@@ -1,6 +1,17 @@
 .orderedtable{
-  border: 2px solid black;
-  margin: 3em auto;
-  max-width: 250px;
+  border: 2px solid #4e4e4e;
+  width: 200px;
   padding: 1em;
+  background-color: #edeff0;
+  position: fixed;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+.orderedtable button {
+  position:relative;
+  left:50%;
+  transform: translateX(-50%);
 }

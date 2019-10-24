@@ -18,13 +18,14 @@ import './OrderedList.css';
      const totalOrder = productsFilter.
      map(item =>
        {return <span
-           key={item.name }> {item.name} : {item.amount}, </span>})
+           key={item.name }> {item.name} : {item.amount} <br /> </span>})
 
     return (
       <div className='orderedtable'>
          <p> Your order: </p>
          <p> {totalOrder} </p>
          <p> Total price: {props.price.toFixed(2)}zl</p>
+         <button> Order </button>
       </div>
     )
   };
